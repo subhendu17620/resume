@@ -36,3 +36,4 @@ jobs:
         with:
           files: main.pdf
           fail_on_unmatched_files: true
+          tag_name: ${{ github.ref }}
