@@ -1,0 +1,230 @@
+
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------RESUME STARTS HERE------------------------
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+	\textbf{\Huge Subhendu Maji} \\ \vspace{2pt}
+	\small +91 99999 48008 $|$ \href{mailto:subhendu17620@gmail.com}{\underline{subhendu17620@gmail.com}} $|$
+	\href{https://linkedin.com/in/subhendu17620}{\underline{Linkedin}} $|$
+	\href{https://github.com/subhendu17620}{\underline{Github}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Ramaiah University of Applied Sciences}{Bangalore, India}
+{Bachelor of Technology in Computer Science \& Engineering - CGPA: 9.1}{Aug 2018 - May 2022}
+\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Ninjacart}{Bangalore, India}
+{Software Development Engineer II}{Apr 2024 - Present}
+\resumeItemListStart
+\resumeItem{Engineered an advanced inventory management system, incorporating features like invoice generation, IRN integration with the GST portal, and credit/debit note processing.}
+\resumeItem{Applied hexagonal architecture and event-driven design patterns to optimize system scalability and modularity.}
+\resumeItemListEnd
+
+
+\resumeSubSubheading
+{Software Development Engineer I}{Apr 2023 - Apr 2024}
+\resumeItemListStart
+\resumeItem{Spearheaded the integration of ONDC services, managing multiple external partnerships (e.g., Paytm, Pincode, Magicpin) to ensure seamless transactions for 250,000+ buyers and 2,000+ sellers.}
+\resumeItem{Performed comprehensive testing with external partners, achieving 100\% system compatibility and securing ONDC sign-off for production migration.}
+\resumeItem{Created Grafana dashboards and integrated Micrometer \& OTLP for advanced service monitoring and cutom exception tracking, significantly reducing issue resolution time.}
+\resumeItem{Created a high-performance promotional pricing engine that drove 80\% of daily orders, handling up to 5,000 orders per minute with a P99 latency of 200ms.}
+\resumeItem{Enhanced the payment settlement module with role-based access control (RBAC) and a maker-checker workflow, reducing manual processing efforts.}
+\resumeItem{Pioneered the adoption of the Atomic Design Pattern in UI development using Next.js and React, resulting in a more modular and scalable interface.}
+\resumeItem{Integrated the inbox/outbox pattern in order management service to synchronize data between primary MySQL and Elasticsearch, implementing an asynchronous data pipeline that enhanced real-time search capabilities and ensured data consistency.}
+\resumeItemListEnd
+
+
+
+\resumeSubSubheading
+{Software Development Engineer}{Jun 2022 - Mar 2023}
+\resumeItemListStart
+\resumeItem{Designed and developed a robust inhouse federated commerce protocol, enabling seamless interactions across multiple external systems. This included features such as search fanout, order relay, inventory synchronization, and multi-tenancy support,}
+\resumeItem{Integrated the Matrix protocol for chat, video, and voice communication, and leveraged UDP TURN server to ensure low latency and high-quality video call performance.}
+\resumeItem{Redesigned the catalog schema to manage various catalog types and categories, supporting over 1,000,000 entries, and employed Apicurio to maintain schema consistency across different services. Additionally, developed elasticsearch based APIs for catalog discovery, boosting search efficiency, cutting response times by 60\%.}
+\resumeItem{Proactively took ownership of and developed a Grievance Management Dashboard which reduced resolution time by 80\% and boosted operational efficiency by automating the lifecycle tracking of over 5,000 grievances monthly.}
+\resumeItem{Introduced Flyway for effective database migration management, improving version control and deployment consistency across multiple environments.}
+\resumeItemListEnd
+
+
+\resumeSubSubheading
+{Software Development Intern}{Feb 2022 - Jun 2022}
+\resumeItemListStart
+\resumeItem{Designed and implemented a dynamic document generation microservice that supports vairous templates (HTML, Excel, PDF, etc.), adopted organization-wide for streamlined document generation and processing.}
+\resumeItem{Transitioned monolithic services to a microservices architecture for profile and order management, enhancing system modularity.}
+\resumeItemListEnd
+
+
+\resumeSubheading
+{Inkers Technology }{Bangalore, India}
+{Software Development Intern}{Nov 2021 - Feb 2022}
+% \resumeItemListStart
+% \resumeItem{-}
+% \resumeItem{-}
+% \resumeItem{-}
+% \resumeItemListEnd
+
+
+% \resumeSubheading
+% {iDreamCareer.com}{Remote}
+% {Frontend Developer Intern}{Jul 2020 - Nov 2020}
+% \resumeItemListStart
+% \resumeItem{-}
+% \resumeItem{-}
+% \resumeItem{-}
+% \resumeItemListEnd
+
+
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+% \section{Projects}
+% \resumeSubHeadingListStart
+
+% \resumeProjectHeading
+% {\textbf{Yo} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+% \resumeItemListStart
+% \resumeItem{-}
+% \resumeItem{-}
+% \resumeItem{-}
+% \resumeItem{-}
+% \resumeItemListEnd
+
+% \resumeProjectHeading
+% {\textbf{Yo} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+% \resumeItemListStart
+% \resumeItem{-}
+% \resumeItem{-}
+% \resumeItem{-}
+% \resumeItem{-}
+% \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+		\textbf{Languages}{: Java, Python, JavaScript, SQL (MySQL, Postgres), C, HTML/CSS, Dart} \\
+		\textbf{Frameworks/Technologies}{: Spring Boot, Elasticsearch, Redis, MongoDB, React, Next.js, JUnit, FastAPI, Flutter} \\
+		\textbf{Developer Tools}{: Git, Docker, Vim, Grafana, Prometheus, Kafka, Linux, GraphQL} \\
+		\textbf{Certifications}{: Machine Learning, Coding Ninjas - Score: 95\%}
+	}}
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}
