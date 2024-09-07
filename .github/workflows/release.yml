@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: document.pdf
+          path: main.pdf
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -40,5 +40,5 @@ jobs:
       - name: Create release with PDF
         uses: softprops/action-gh-release@v1
         with:
-          files: document.pdf
+          files: main.pdf
           fail_on_unmatched_files: true
