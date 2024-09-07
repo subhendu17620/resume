@@ -37,5 +37,5 @@ jobs:
         with:
           files: main.pdf
           fail_on_unmatched_files: true
-          tag_name: "sha-${{ github.sha }}"
+          tag_name: "v${{ github.run_number }}"
           token: ${{ secrets.GITHUB_TOKEN }}
