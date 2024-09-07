@@ -13,5 +13,6 @@
     "**/.git/objects/**",
     ".vscode"
   ],
-  "cSpell.words": ["connectionist"]
+  "cSpell.words": ["connectionist"],
+  "github-actions.workflows.pinned.workflows": [".github/workflows/release.yml"]
 }
