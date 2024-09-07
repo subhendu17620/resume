@@ -12,31 +12,33 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_latex:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v3
-
+      - name: Checkout repo
+        uses: actions/checkout@v4
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
-          latexmk_use_xelatex: true
-
-      - name: Display output of build
-        run: ls -R
-
-      - name: Upload artifact
+      - name: Upload PDF artifact
         uses: actions/upload-artifact@v3
         with:
-          name: draft.pdf
-          path: main.pdf
-
-      - name: Upload to release
+          name: PDF
+          path: document.pdf
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref_type == 'tag'
+    permissions:
+      contents: write
+    steps:
+      - name: Download PDF artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: PDF
+      - name: Create release with PDF
         uses: softprops/action-gh-release@v1
         with:
-          files: main.pdf
-          tag_name: auto_build_draft
-          name: Auto build draft
+          files: document.pdf
+          fail_on_unmatched_files: true
