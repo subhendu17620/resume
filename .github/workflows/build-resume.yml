@@ -5,6 +5,8 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,11 +18,8 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
-      - name: Compile LaTeX to PDF
-        run: latexmk -pdf -silent main.tex -outdir=build
-
-      - name: Upload PDF
-        uses: actions/upload-artifact@v3
-        with:
-          name: resume-pdf
-          path: main.pdf
+      - name: add and commit changes
+        run: |
+          git add main.pdf
+          git commit -m "[Bot] Update PDF"
+          git push
