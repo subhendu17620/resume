@@ -29,13 +29,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Download PDF artifact
         uses: actions/download-artifact@v4
         with:
           name: PDF
-
-      - name: Checkout repo
-        uses: actions/checkout@v4
 
       - name: Display structure of downloaded files
         run: ls -R
@@ -45,7 +45,7 @@ jobs:
           mv resume.pdf output/resume.pdf
           git config --global user.name 'workflow-bot'
           git config --global user.email 'bot@subhendu17620.github.io'
-          git add output/resume.pdf
+          git add ./output/resume.pdf
           git commit -m "[Bot] Update output/resume.pdf"
           git push
   # create-release:
