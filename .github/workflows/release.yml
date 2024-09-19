@@ -48,6 +48,12 @@ jobs:
           git add ./output/resume.pdf
           git commit -m "[Bot] Update output/resume.pdf"
           git push
+  deploy-to-gh-pages:
+    runs-on: ubuntu-latest
+    needs: commit-output
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
   # create-release:
   #   needs: build
   #   runs-on: ubuntu-latest
