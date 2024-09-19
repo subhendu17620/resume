@@ -37,7 +37,7 @@ jobs:
         run: ls -R
       - name: Add and commit changes
         run: |
-          mv resume.pdf $GITHUB_WORKSPACE/output/resume.pdf
+          mv resume.pdf output/resume.pdf
           git config --global user.name 'workflow-bot'
           git config --global user.email 'bot@subhendu17620.github.io'
           git add output/resume.pdf
