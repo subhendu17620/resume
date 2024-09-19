@@ -1,4 +1,4 @@
-name: Build Latex document
+name: Build and Deploy Resume
 
 # Controls when the action will run.
 on:
@@ -19,11 +19,12 @@ jobs:
         with:
           root_file: main.tex
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=resume
-      - name: add and commit changes
+
+      - name: Add and commit changes
         run: |
           mv resume.pdf output/resume.pdf
           git config --global user.name 'workflow-bot'
           git config --global user.email 'bot@subhendu17620.github.io'
           git add output/resume.pdf
-          git commit -m "[Bot] Update PDF"
+          git commit -m "[Bot] Update output/resume.pdf"
           git push

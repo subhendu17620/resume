@@ -1,4 +1,4 @@
-name: Build Latex document
+name: Build and Deploy Resume
 
 # Controls when the action will run.
 on:
@@ -11,16 +11,33 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=resume
+
       - name: Upload LaTeX artifact
         uses: actions/upload-artifact@v4
         with:
           name: PDF
-          path: main.pdf
-  deploy:
+          path: resume.pdf
+  commit-output:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: write
+    steps:
+      - name: Add and commit changes
+        run: |
+          mv resume.pdf output/resume.pdf
+          git config --global user.name 'workflow-bot'
+          git config --global user.email 'bot@subhendu17620.github.io'
+          git add output/resume.pdf
+          git commit -m "[Bot] Update output/resume.pdf"
+          git push
+  create-release:
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -35,7 +52,7 @@ jobs:
       - name: Create release with PDF
         uses: softprops/action-gh-release@v2
         with:
-          files: main.pdf
+          files: resume.pdf
           fail_on_unmatched_files: true
           tag_name: "v${{ github.run_number }}"
           token: ${{ secrets.GITHUB_TOKEN }}
