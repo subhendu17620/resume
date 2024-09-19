@@ -8,6 +8,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -47,15 +48,13 @@ jobs:
           mv resume.pdf output/resume.pdf
           git config --global user.name 'workflow-bot'
           git config --global user.email 'bot@subhendu17620.github.io'
-          git add ./output/resume.pdf
+          git add output/resume.pdf
           git commit -m "[Bot] Update output/resume.pdf"
           git push
-  deploy-to-gh-pages:
-    runs-on: ubuntu-latest
-    needs: commit-output
-    steps:
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+
   # create-release:
   #   needs: build
   #   runs-on: ubuntu-latest
