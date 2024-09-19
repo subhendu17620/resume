@@ -20,6 +20,8 @@ jobs:
           root_file: main.tex
       - name: add and commit changes
         run: |
+          git config --global user.name 'workflow-bot'
+          git config --global user.email 'bot@subhendu17620.github.io
           git add main.pdf
           git commit -m "[Bot] Update PDF"
           git push
