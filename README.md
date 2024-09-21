@@ -11,6 +11,7 @@ You can view or download the latest version of my resume by clicking [here](http
 - **Source File**: The resume is written in LaTeX (`main.tex`).
 - **Automated Build**: GitHub Actions compiles the LaTeX file into a PDF whenever changes are pushed to the repository.
 - **Compiled PDF**: The PDF version of the resume is available as an artifact and hosted in the `output` folder.
+- **GitHub Pages**: The latest version of the resume is hosted on GitHub Pages and is accessible [here](https://subhendu17620.github.io/resume/output/resume.pdf).
 
 ## Compiling Locally
 
