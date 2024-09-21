@@ -2,10 +2,6 @@
 
 Welcome to my resume repository! This repository contains my professional resume in LaTeX format. The resume is automatically compiled to a PDF using GitHub Actions on each update.
 
-## View the Latest Resume
-
-You can view or download the latest version of my resume by clicking [here](https://subhendu17620.github.io/resume/output/resume.pdf).
-
 ## How it Works
 
 - **Source File**: The resume is written in LaTeX (`main.tex`).
