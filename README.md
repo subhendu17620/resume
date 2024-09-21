@@ -25,3 +25,7 @@ If you'd like to compile the resume locally, follow these steps:
    ```
 4. Open the repository in Visual Studio Code.
 5. Open `main.tex` and click the "Build LaTeX project" button in the top-right corner of the editor.
+
+## License
+
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
