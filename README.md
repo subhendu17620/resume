@@ -1,5 +1,6 @@
 ### Resume
 
+
 Welcome to my resume repository! This repository contains my professional resume in LaTeX format. The resume is automatically compiled to a PDF using GitHub Actions on each update.
 
 ## How it Works
