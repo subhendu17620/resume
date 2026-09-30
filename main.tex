@@ -108,122 +108,76 @@
 \end{center}
 
 
-%-----------EDUCATION-----------
-
-\section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Ramaiah University of Applied Sciences}{Bangalore, India}
-{Bachelor of Technology in Computer Science \& Engineering - CGPA: 9.1}{Aug 2018 - May 2022}
-\resumeSubHeadingListEnd
-
-
 %-----------EXPERIENCE-----------
 \section{Experience}
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{Ninjacart}{Bangalore, India}
-{Software Development Engineer II}{Apr 2024 - Present}
+{Shyro Health}{Bangalore, India}
+{Software Development Engineer II}{Nov 2024 - Present}
 \resumeItemListStart
-\resumeItem{Engineered an advanced inventory management system, incorporating features like invoice generation, IRN integration with the GST portal, and credit/debit note processing.}
-\resumeItem{Applied hexagonal architecture and event-driven design patterns to optimize system scalability and modularity.}
+\resumeItem{Lead a team of \textbf{10 engineers}; architected the company's backend infrastructure from scratch, serving \textbf{2,000+ members} and \textbf{25+ therapists} across \textbf{500+ appointments/month}.}
+\resumeItem{Built the platform on a \textbf{HIPAA-compliant} architecture (encryption at rest and in transit, audit logging, least-privilege access) and am driving \textbf{ISO 27001} certification (in progress).}
+\resumeItem{Built an AI post-appointment pipeline that turns 1-hour therapy sessions into transcripts and structured clinical notes using Claude in \textbf{under 3 minutes}, with a \textbf{98\% clinician acceptance rate}.}
+\resumeItem{Built an AI therapy chat agent (\textbf{300+ sessions}) with real-time crisis detection (e.g., suicidal ideation) and escalation that brings a therapist into the chat; handled \textbf{30+ crisis escalations} safely.}
+\resumeItem{Built a PII data vault service (Skyflow-style) that encrypts and tokenizes \textbf{12,000+ sensitive fields} for 2,000+ users, isolating PHI from application services.}
+\resumeItem{Developed a high-throughput event service in \textbf{Go} handling \textbf{1M+ requests/day}.}
+\resumeItem{Designed and shipped \textbf{15+ backend service modules}: clinical notes, booking and calendar, video calls, assessments, care journeys, journaling, LMS, notifications, content management, and compliance.}
+\resumeItemListEnd
+
+
+\resumeSubheading
+{Ninjacart}{Bangalore, India}
+{Software Development Engineer II}{Apr 2024 - Oct 2024}
+\resumeItemListStart
+\resumeItem{Engineered an inventory management system with invoice generation, GST portal IRN integration, and credit/debit note processing, using hexagonal architecture and event-driven design.}
 \resumeItemListEnd
 
 
 \resumeSubSubheading
 {Software Development Engineer I}{Apr 2023 - Apr 2024}
 \resumeItemListStart
-\resumeItem{Spearheaded the integration of ONDC protocol, managing multiple external partnerships (e.g., Paytm, Pincode, Magicpin) to ensure seamless transactions for 250,000+ buyers and 2,000+ sellers.}
-\resumeItem{Performed comprehensive testing with external partners, achieving 100\% system compatibility and securing ONDC sign-off for production migration.}
-\resumeItem{Created Grafana dashboards and integrated Micrometer \& OTLP for advanced service monitoring and cutom exception tracking, significantly reducing issue resolution time.}
-\resumeItem{Created a high-performance promotional pricing engine that drove 80\% of daily orders, handling up to 5,000 orders per minute with a P99 latency of 200ms.}
-\resumeItem{Enhanced the payment settlement module with role-based access control (RBAC) and a maker-checker workflow, reducing manual processing efforts.}
-\resumeItem{Pioneered the adoption of the Atomic Design Pattern in UI development using Next.js and React, resulting in a more modular and scalable interface.}
-\resumeItem{Integrated the inbox/outbox pattern in order management service to synchronize data between primary MySQL and Elasticsearch, implementing an asynchronous data pipeline that enhanced real-time search capabilities and ensured data consistency.}
-\resumeItemListEnd
-
-
-
-\resumeSubSubheading
-{Software Development Engineer}{Jun 2022 - Mar 2023}
-\resumeItemListStart
-\resumeItem{Designed and developed a robust inhouse federated commerce protocol, enabling seamless interactions across multiple external systems. This included features such as search fanout, order relay, inventory synchronization, and multi-tenancy support.}
-\resumeItem{Integrated the Matrix protocol for chat, video, and voice communication, and leveraged UDP TURN server to ensure low latency and high-quality video call performance.}
-\resumeItem{Redesigned the catalog schema to manage various catalog types and categories, supporting over 1,000,000 entries, and employed Apicurio to maintain schema consistency across different services. Additionally, developed elasticsearch based APIs for catalog discovery, boosting search efficiency, cutting response times by 60\%.}
-\resumeItem{Proactively took ownership of and developed a Grievance Management Dashboard which reduced resolution time by 80\% and boosted operational efficiency by automating the lifecycle tracking of over 5,000 grievances monthly.}
-\resumeItem{Introduced Flyway for effective database migration management, improving version control and deployment consistency across multiple environments.}
+\resumeItem{Built a promotional pricing engine driving \textbf{80\% of daily orders}, handling up to \textbf{5,000 orders/min} at \textbf{200ms P99} latency.}
+\resumeItem{Led ONDC protocol integration with external partners (Paytm, Pincode, Magicpin), serving \textbf{250,000+ buyers} and \textbf{2,000+ sellers}; secured ONDC production sign-off with 100\% partner compatibility.}
+\resumeItem{Implemented the inbox/outbox pattern to sync order data from MySQL to Elasticsearch asynchronously, enabling real-time search with guaranteed consistency.}
+\resumeItem{Set up observability with Grafana, Micrometer, and OTLP, including custom exception tracking, significantly reducing issue resolution time.}
+\resumeItem{Added RBAC and a maker-checker workflow to the payment settlement module, reducing manual processing.}
 \resumeItemListEnd
 
 
 \resumeSubSubheading
-{Software Development Intern}{Feb 2022 - Jun 2022}
+{Software Development Engineer}{Feb 2022 - Mar 2023}
 \resumeItemListStart
-\resumeItem{Designed and implemented a dynamic document generation microservice that supports vairous templates (HTML, Excel, PDF, etc.), adopted organization-wide for streamlined document generation and processing.}
-\resumeItem{Transitioned monolithic services to a microservices architecture for profile and order management, enhancing system modularity.}
+\resumeItem{Designed an in-house federated commerce protocol supporting search fan-out, order relay, inventory sync, and multi-tenancy across external systems.}
+\resumeItem{Redesigned the catalog schema to support \textbf{1M+ entries} with Apicurio schema registry; built Elasticsearch discovery APIs that cut response times by \textbf{60\%}.}
+\resumeItem{Built a grievance management dashboard automating lifecycle tracking of \textbf{5,000+ grievances/month}, reducing resolution time by \textbf{80\%}.}
+\resumeItem{Built an organization-wide document generation microservice supporting HTML, Excel, and PDF templates.}
 \resumeItemListEnd
-
-
-\resumeSubheading
-{Inkers Technology }{Bangalore, India}
-{Software Development Intern}{Nov 2021 - Feb 2022}
-% \resumeItemListStart
-% \resumeItem{-}
-% \resumeItem{-}
-% \resumeItem{-}
-% \resumeItemListEnd
-
-
-% \resumeSubheading
-% {iDreamCareer.com}{Remote}
-% {Frontend Developer Intern}{Jul 2020 - Nov 2020}
-% \resumeItemListStart
-% \resumeItem{-}
-% \resumeItem{-}
-% \resumeItem{-}
-% \resumeItemListEnd
-
 
 \resumeSubHeadingListEnd
 
 
-%-----------PROJECTS-----------
-% \section{Projects}
-% \resumeSubHeadingListStart
-
-% \resumeProjectHeading
-% {\textbf{Yo} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
-% \resumeItemListStart
-% \resumeItem{-}
-% \resumeItem{-}
-% \resumeItem{-}
-% \resumeItem{-}
-% \resumeItemListEnd
-
-% \resumeProjectHeading
-% {\textbf{Yo} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-% \resumeItemListStart
-% \resumeItem{-}
-% \resumeItem{-}
-% \resumeItem{-}
-% \resumeItem{-}
-% \resumeItemListEnd
-
-% \resumeSubHeadingListEnd
-
-
-
-%
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages}{: Java, Python, JavaScript, SQL (MySQL, Postgres), C, HTML/CSS, Dart} \\
-        \textbf{Frameworks/Technologies}{: Spring Boot, Elasticsearch, Redis, MongoDB, React, Next.js, JUnit, FastAPI, Flutter} \\
-        \textbf{Developer Tools}{: Git, Docker, Vim, Grafana, Prometheus, Kafka, Linux, GraphQL} \\
-        \textbf{Certifications}{: Machine Learning, Coding Ninjas - Score: 95\%}
+        \textbf{Languages}{: Java, Go, Python, JavaScript, SQL} \\
+        \textbf{Backend}{: Spring Boot, FastAPI, Kafka, Redis, Elasticsearch, GraphQL} \\
+        \textbf{Databases}{: PostgreSQL, MySQL, MongoDB} \\
+        \textbf{Infra \& Observability}{: Docker, Linux, Git, Grafana, Prometheus, OpenTelemetry} \\
+        \textbf{AI/LLM}{: Claude API, LLM pipelines, speech-to-text transcription} \\
+        \textbf{Compliance}{: HIPAA, ISO 27001, PII encryption and tokenization, audit logging}
         }}
 \end{itemize}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Ramaiah University of Applied Sciences}{Bangalore, India}
+{B.Tech, Computer Science \& Engineering - CGPA: 9.1}{Aug 2018 - May 2022}
+\resumeSubHeadingListEnd
 
 
 %-------------------------------------------
